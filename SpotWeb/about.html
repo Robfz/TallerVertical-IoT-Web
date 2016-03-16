@@ -9,13 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>About - Parking Finder</title>
+    <title>Parking Finder</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/business-casual.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -32,17 +33,25 @@
 
 <body>
 
-    <div class="brand">Parking Finder</div>
-    <div class="address-bar">2514 Av. General Ramón Corona | Zapopan, JAL 45201 </div>
+     <div class="row">
+            
+                
+                <div class="col-lg-12 text-center">
+                    <img class="img-responsive center-block img b" src="img/C.png" alt="">
+                </div>
+                
+               
+        </div>
+<br>
+    <div class="address-bar g">2514 Av. General Ramón Corona | Zapopan, JAL | 45201</div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
+    <nav class="navbar navbar-default brd bckgrd " role="navigation">
+        <div class="container bckgrd f">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <div class="navbar-header ">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
@@ -50,8 +59,8 @@
                 <a class="navbar-brand" href="index.html">Business Casual</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse  " id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav  ">
                     <li>
                         <a href="index.html">Home</a>
                     </li>
@@ -59,10 +68,7 @@
                         <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Team Members</a>
+                        <a href="contact.html">Team members</a>
                     </li>
                 </ul>
             </div>
@@ -71,38 +77,42 @@
         <!-- /.container -->
     </nav>
 
-    <div class="container">
+
+    <div class="container bckgrd2 d s">
 
         <div class="row">
-            <div class="box">
+            
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">About
-                        <strong>parking finder</strong>
-                    </h2>
+                    <h1 class="intro-text text-center lk">About
+                        <strong>Spot</strong>
+                    </h1>
                     <hr>
                 </div>
-                <div class="col-md-6">
-                    <img class="img-responsive img-border-left" src="img/slide-2.jpg" alt="">
+                
+                <div class="col-lg-12">
+                    <p class="t">We are developing a solution for parking problems, because it's a waste of time to find a spot for your car.
+                   To resolve this problem we are going to modelate in a scale of two zones in which each one will have 20 spots.
+                   We are going to use sensors to detect the toy cars.</p>
                 </div>
-                <div class="col-md-6">
-                    <p>We are developing a solution for parking problems, because it's a waste of time to find a spot for your car.</p>
-                    <p>To resolve this problem we are going to modelate in a scale of two zones in which each one will have 20 spots.</p>
-                    <p>We are going to use sensors to detect the toy cars.</p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
+
+
+
+                
+
+           
         </div>
+        
 
 
     </div>
     <!-- /.container -->
 
     <footer>
-        <div class="container">
+        <div class="footer bckgrd">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Parking Finder 2014</p>
+                    <p>Copyright &copy; Your Website 2014</p>
                 </div>
             </div>
         </div>
@@ -113,6 +123,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
 
 </body>
 
