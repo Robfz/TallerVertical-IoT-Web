@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <title>Spot</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -41,20 +41,32 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">Spot</span>
-                </a>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Username
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="settings.html">Settings</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="home.html">Log out</a></li>
+                  </ul>
+                </div>
             </div>
+
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
+                    <li>
+                      <a class=" page-scroll" href="#page-top">Home</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">Parking</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#Administration">Administration</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#download">About</a>
@@ -99,13 +111,28 @@
         </div>
     </section>
 
-    <!-- Download Section -->
+    <!-- Administration Section -->
+      <section id="Administration" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Administration</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="parking.html" class="btn btn-default btn-lg">Parking Lot</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
     <section id="download" class="content-section text-center">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <h2>About</h2>
+                    <p>We are developing a solution for parking problems, because it's a waste of time to find a spot for your car.
+                   To resolve this problem we are going to modelate in a scale of two zones in which each one will have 20 spots.
+                   We are going to use sensors to detect the toy cars.</p>
                     <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
                 </div>
             </div>
@@ -116,8 +143,7 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-              <h2>Objective</h2>
-              <p>Our objective is to create a model to get in an easy way a spot in a parking lot.</p>
+              <h2>Contact</h2>
                 <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">
