@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Parking Finder</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/business-casual.css" rel="stylesheet">
+    <link href="css/map.css" rel="stylesheet">
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 60%;
+        width: 75%;
+        padding-left: 15%;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <img class="img-responsive center-block img b" src="img/C.png" alt="">
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-lg-4 text-center">
+        <div>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <ul class="list-group ocupation">
+          <li class="list-group-item">
+            <span class="badge">20</span>
+            Ocupation Section A
+          </li>
+          <li class="list-group-item">
+            <span class="badge">20</span>
+            Ocupation Section B
+          </li>
+          <li class="list-group-item">
+            <span class="badge">20</span>
+            Ocupation Section B
+          </li>
+        </ul>
+      </div>
+    </div>
+        <div class="g" id="map"></div>
+          <script>
+
+            // This example creates a simple polygon representing the Bermuda Triangle.
+
+            function initMap() {
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16,
+                center: {lat: 20.7343, lng: -103.4559},
+                mapTypeId: google.maps.MapTypeId.TERRAIN
+              });
+
+              // Define the LatLng coordinates for the polygon's path.
+              var zone11 = [
+                {lat: 20.737126163903273 , lng: -103.45398724079132},
+                {lat: 20.73706094440902 , lng: -103.4531557559967},
+                {lat: 20.736228139165338 , lng: -103.45331132411957},
+                {lat: 20.736283325196773 , lng: -103.45406234264374}
+
+              ]
+              var zone1 = [
+                {lat: 20.737597750179134 , lng: -103.45395773649216},
+                {lat: 20.737457277825108 , lng: -103.4530645608902},
+                {lat: 20.737133689227722 , lng: -103.45312356948853},
+                {lat: 20.73722650153185 , lng: -103.45399528741837}
+              ];
+
+              var zone2 = [
+                {lat: 20.73611525858384 , lng: -103.45409721136093},
+                {lat: 20.736065089409482 , lng: -103.45330327749252},
+                {lat: 20.73530000743986 , lng: -103.4534427523613},
+                {lat: 20.735357702280602 , lng: -103.45416158437729}
+
+              ];
+
+              var zone3 = [
+                {lat: 20.735269905775095 , lng: -103.45416694879532},
+                {lat: 20.73520719395426 , lng: -103.45345616340637},
+                {lat: 20.734718040859974 , lng: -103.45352053642273},
+                {lat: 20.734775735922565 , lng: -103.4542179107666}
+
+              ];
+
+              var zone4 = [
+                {lat: 20.73469546452515 , lng: -103.45422863960266},
+                {lat: 20.734630243983396 , lng: -103.45352590084076},
+                {lat: 20.733940409609644 , lng: -103.45365464687347},
+                {lat: 20.733988070994766 , lng: -103.45428496599197}
+
+              ];
+
+              var zone5 = [
+                {lat: 20.7339077991796 , lng: -103.45429569482803},
+                {lat: 20.733852612281993 , lng: -103.45365732908249},
+                {lat: 20.733325827246578 , lng: -103.45372974872589},
+                {lat: 20.73337348882521 , lng: -103.45435202121735}
+              ];
+
+              var zone6 = [
+                {lat: 20.73329823369418 , lng: -103.45435202121735},
+                {lat: 20.733245555080202 , lng: -103.45373779535294},
+                {lat: 20.732036450424562 , lng: -103.45398724079132},
+                {lat: 20.7320615356815 , lng: -103.45445394515991}
+
+              ];
+
+              var zone7 = [
+                {lat: 20.73342365889178 , lng: -103.45354199409485},
+                {lat: 20.73333836976872 , lng: -103.45289289951324},
+                {lat: 20.732525612185043 , lng: -103.45304846763611},
+                {lat: 20.732716259417437 , lng: -103.4536761045456}
+              ];
+              var zone8 = [
+                {lat: 20.732390152163465 , lng: -103.45595061779022},
+                {lat: 20.732430288478803 , lng: -103.45558047294617},
+                {lat: 20.732866770220774 , lng: -103.45500111579895},
+                {lat: 20.732861753196403 , lng: -103.45456659793854},
+                {lat: 20.732284794285118 , lng: -103.45468997955322},
+                {lat: 20.731978754317822 , lng: -103.4551727771759},
+                {lat: 20.732054010104854 , lng: -103.45577359199524}
+              ];
+              var zone9 = [
+                {lat: 20.732921957477814 , lng: -103.45720052719116},
+                {lat: 20.732886838316563 , lng: -103.45643877983093},
+                {lat: 20.73225469202069 , lng: -103.45605790615082},
+                {lat: 20.73227977724146 , lng: -103.45698595046997},
+                {lat: 20.732555714395595 , lng: -103.45727562904358}
+              ];
+              var zone10 = [
+                {lat: 20.732656055054193 , lng: -103.45735609531403},
+                {lat: 20.733860137769202 , lng: -103.45723271369934},
+                {lat: 20.73393037563192 , lng: -103.45779597759247},
+                {lat: 20.73270622535855 , lng: -103.45789790153503}
+              ];
+
+              // Construct the polygon.
+              var polygon1 = new google.maps.Polygon({
+                paths: zone1,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+              });
+              polygon1.setMap(map);
+              var polygon2 = new google.maps.Polygon({
+                paths: zone2,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+              });
+              polygon2.setMap(map);
+              var polygon3 = new google.maps.Polygon({
+                paths: zone3,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+              });
+              polygon3.setMap(map);
+              var polygon4 = new google.maps.Polygon({
+                paths: zone4,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+              });
+              polygon4.setMap(map);
+              var polygon5 = new google.maps.Polygon({
+                paths: zone5,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+              });
+              polygon5.setMap(map);
+              var polygon6 = new google.maps.Polygon({
+                paths: zone6,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+              });
+              polygon6.setMap(map);
+              var polygon7 = new google.maps.Polygon({
+                paths: zone7,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+              });
+              polygon7.setMap(map);
+              var polygon8 = new google.maps.Polygon({
+                paths: zone8,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+              });
+              polygon8.setMap(map);
+              var polygon9 = new google.maps.Polygon({
+                paths: zone9,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+              });
+              polygon9.setMap(map);
+              var polygon10 = new google.maps.Polygon({
+                paths: zone10,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+              });
+              polygon10.setMap(map);
+              var polygon11 = new google.maps.Polygon({
+                paths: zone11,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+              });
+              polygon11.setMap(map);
+            }
+          </script>
+          <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSTe4yqEsxtZNWpV6YwHPL-D5EwNgswh4&callback=initMap">
+          </script>
+
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Plate</th>
+          <th>Section</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A01630086</td>
+          <td>JGR-34-54</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>A01630088</td>
+          <td>JDR-45-32</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>A01630087</td>
+          <td>JHT-67-65</td>
+          <td>B</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+    <!-- /.container -->
+
+
+
+
+    <footer class="bckgrd">
+        <div class="footer bckgrd2">
+            <div class="row bckgrd2">
+                <div class="col-lg-12 text-center bckgrd">
+                    <a href="index.html" class="btn btn-default btn-lg">Home</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
+</html>

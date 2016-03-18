@@ -102,3 +102,12 @@ vertical-align: middle;
 p{color:white;}
 h1{color:white;}
 h2{color:white;}
+
+
+
+.g{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto; @important!
+}
